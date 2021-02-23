@@ -168,7 +168,7 @@ pub fn instruction_signatures(op: Op) -> Option<&'static [InstSig<'static>]> {
             return Some(&[$(InstSig {
                 inputs: pat!([$($in_tys)*]),
                 output: optionify!($(pat!($out_ty $(($($out_ty_args)+))?))?),
-            }),*]);
+            }),*])
         };
     }
 
